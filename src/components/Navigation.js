@@ -28,7 +28,7 @@ export default function Navigation(props) {
               <Nav navbar>
                 <NavItem>
                   <NavLink href="https://github.com/reactstrap/reactstrap">
-                    <Link to="/home">
+                    <Link to="/cart">
                       <i class="ri-shopping-cart-fill"></i>
                     </Link>
                   </NavLink>

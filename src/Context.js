@@ -1,11 +1,11 @@
-import React, {useState} from 'react'
-
+import React from 'react'
+import products from './products'
 const Context = React.createContext()
 
 function ContextProvider({children}) {
-    const [products, setProducts] = useState([])
+    // const allProducts = products.map(product => product.id)
     return (
-        <Context.Provider value={{products}}>
+        <Context.Provider value={products}>
             {children}
         </Context.Provider>
     )

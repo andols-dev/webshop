@@ -1,23 +1,33 @@
 let products = [
   {
-    Title: 1,
-    Price: 123,
+    Title: "Awesome product",
+    Price: 123.95,
+    Img: "/img/couch.jpg",
+    Id: "1",
   },
   {
-    Title: 5,
-    Price: 123,
+    Title: "Another Awesome product",
+    Price: 12345,
+    Img: "/img/couch.jpg",
+    Id: "2",
   },
   {
-    Title: 5,
-    Price: 123,
+    Title: "A miracle product",
+    Price: 2123,
+    Img: "/img/couch.jpg",
+    Id: "3",
   },
   {
-    Title: 5,
-    Price: 123,
+    Title: "asd",
+    Price: 2123,
+    Img: "/img/couch.jpg",
+    Id: "4",
   },
   {
-    Title: 5,
+    Title: "asdjk",
     Price: 123,
+    Img: "/img/couch.jpg",
+    Id: "5",
   },
 ];
 

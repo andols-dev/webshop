@@ -7,32 +7,28 @@ export default function Navigation(props) {
 
     const toggleNavbar = () => setCollapsed(!collapsed);
     return (
-      
-        <Navbar color="faded" light expand="md">
-          <div className="container">
-            <div className="mr-auto">
-              <Link to="/">Shop name</Link>
-            </div>
-            <NavbarToggler onClick={toggleNavbar} className="mr-2" />
-            <Collapse isOpen={!collapsed} navbar>
-              <Nav className="mr-auto">
-                
-                  
-                
-                
-              </Nav>
-              <Nav>
-                <NavItem>
-                  
-                    <Link to="/cart">
-                      <i className="ri-shopping-cart-fill"></i>
-                    </Link>
-                 
-                </NavItem>
-              </Nav>
-            </Collapse>
+      <Navbar className="mt-4" color="faded" light expand="md">
+        <div className="container">
+          <div className="mr-auto">
+            <Link to="/" style={{ fontSize: "34px" }}>
+              Shop name
+            </Link>
           </div>
-        </Navbar>
-      
+          <NavbarToggler onClick={toggleNavbar} className="mr-2" />
+          <Collapse isOpen={!collapsed} navbar>
+            <Nav className="mr-auto"></Nav>
+            <Nav>
+              <NavItem>
+                <Link to="/cart">
+                  <i
+                    className="ri-shopping-cart-2-line"
+                    style={{ fontSize: "34px" }}
+                  ></i>
+                </Link>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </div>
+      </Navbar>
     );
 }

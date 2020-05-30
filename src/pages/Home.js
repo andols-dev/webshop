@@ -3,25 +3,27 @@ import { Context } from "../Context";
 import ProductCard from "../components/ProductCard";
 import { Container, Row, Col } from "reactstrap";
 export default function Home() {
-  const products = useContext(Context);
-  console.log(products.map((product) => product.id));
+  const { allProducts } = useContext(Context);
+  
 
-  const allProducts = products.map((product) => {
+  const products = allProducts.map((product) => {
     return (
       <Col key={product.Id} md="6" lg="4">
         <ProductCard
           Title={product.Title}
           Price={product.Price}
           Img={product.Img}
+          Id={product.Id}
+          isFavorite={product.isFavorite}
         />
       </Col>
     );
   });
-  console.log(allProducts);
+ 
 
   return (
-    <Container>
-      <Row>{allProducts}</Row>
+    <Container className="mt-5">
+      <Row>{products}</Row>
     </Container>
   );
 }

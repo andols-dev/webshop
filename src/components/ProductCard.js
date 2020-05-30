@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, {useState, useContext} from "react";
+import {Context} from "../Context"
 import {
   Card,
   Button,
@@ -9,20 +10,33 @@ import {
   CardText,
 } from "reactstrap";
 
-export default function ProductCard({ Title, Price, Img, Test}) {
+export default function ProductCard({ Title, Price, Img, Id, isFavorite}) {
   const [hovered, setHovered] = useState(false);
-
-  const heartIcon = hovered && (
-    <i className="ri-heart-2-line" style={{ cursor: "pointer" }} title="Add as Favourite"></i>
-  );
+  const {toggleFavourite} = useContext(Context)
+  function heartIcon() {
+    if(isFavorite) {
+      return (
+        <i className="ri-heart-2-fill" style={{color: "crimson"}} onClick={() => toggleFavourite(Id)}></i>
+      );
+    } else if(hovered) {
+      return (
+        <i
+          className="ri-heart-2-line"
+          style={{ cursor: "pointer", color: 'crimson' }}
+          title="Add as Favourite"
+          onClick={() => toggleFavourite(Id)}
+        ></i>
+      );
+    }
+  } 
   return (
-    <Card
+    <Card className="mt-5"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       
     >
       <CardHeader>
-  <span>{Title} {Test}</span> <span className="float-right">{heartIcon}</span>
+  <span>{Title} </span> <span className="float-right">{heartIcon()}</span>
       </CardHeader>
       <CardBody>
         <CardTitle>Special Title Treatment</CardTitle>

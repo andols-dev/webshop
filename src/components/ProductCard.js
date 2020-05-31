@@ -9,6 +9,7 @@ import {
   CardTitle,
   CardText,
 } from "reactstrap";
+import Rating from "./Rating";
 
 export default function ProductCard({ Title, Price, Img, Id, isFavorite}) {
   const [hovered, setHovered] = useState(false);
@@ -16,7 +17,11 @@ export default function ProductCard({ Title, Price, Img, Id, isFavorite}) {
   function heartIcon() {
     if(isFavorite) {
       return (
-        <i className="ri-heart-2-fill" style={{color: "crimson"}} onClick={() => toggleFavourite(Id)}></i>
+        <i
+          className="ri-heart-2-fill"
+          style={{ cursor: "pointer", color: "crimson" }}
+          onClick={() => toggleFavourite(Id)}
+        ></i>
       );
     } else if(hovered) {
       return (
@@ -30,24 +35,33 @@ export default function ProductCard({ Title, Price, Img, Id, isFavorite}) {
     }
   } 
   return (
-    <Card className="mt-5"
+    <Card
+      className="mt-5"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      
     >
       <CardHeader>
-  <span>{Title} </span> <span className="float-right">{heartIcon()}</span>
+        <span>{Title} </span> <span className="float-right">{heartIcon()}</span>
       </CardHeader>
       <CardBody>
         <CardTitle>Special Title Treatment</CardTitle>
-
         <CardText>
-         <img src={Img} alt=""/>
+          <img src={Img} alt="" />
           With supporting text below as a natural lead-in to additional content.
+          <br></br>
+          <span className="mt-1">Price: ${Price}</span>
         </CardText>
         <Button>Add to Cart</Button>
       </CardBody>
-      <CardFooter>${Price}</CardFooter>
+      <CardFooter>
+        <span>
+          Rate product:
+          <span className="stars">
+            {" "}
+            <Rating />
+          </span>
+        </span>
+      </CardFooter>
     </Card>
   );
 }

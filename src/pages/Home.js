@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { Context } from "../Context";
 import ProductCard from "../components/ProductCard";
 import { Container, Row, Col } from "reactstrap";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 export default function Home() {
   const { allProducts } = useContext(Context);
   
@@ -23,6 +25,7 @@ export default function Home() {
 
   return (
     <Container className="mt-5">
+      <ToastContainer />
       <Row>{products}</Row>
     </Container>
   );

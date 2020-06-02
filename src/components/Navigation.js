@@ -1,9 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem,} from 'reactstrap';
 import {Link} from 'react-router-dom'
+import {Context} from '../Context'
 
 export default function Navigation(props) {
     const [collapsed, setCollapsed] = useState(true);
+    const {cartItems} = useContext(Context)
+    const cart =
+      cartItems.length === 0 ? (
+        <i className="ri-shopping-cart-2-line"></i>
+      ) : (
+        <i className="ri-shopping-cart-2-fill"></i>
+      );
 
     const toggleNavbar = () => setCollapsed(!collapsed);
     return (
@@ -19,11 +27,8 @@ export default function Navigation(props) {
             <Nav className="mr-auto"></Nav>
             <Nav>
               <NavItem>
-                <Link to="/cart">
-                  <i
-                    className="ri-shopping-cart-2-line"
-                    style={{ fontSize: "34px" }}
-                  ></i>
+                <Link to="/cart" style={{ fontSize: "34px" }}>
+                  {cart}
                 </Link>
               </NavItem>
             </Nav>

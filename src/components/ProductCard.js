@@ -11,29 +11,33 @@ import {
 } from "reactstrap";
 import Rating from "./Rating";
 
+import "react-toastify/dist/ReactToastify.css";
+
+
 export default function ProductCard({ Title, Price, Img, Id, isFavorite}) {
   const [hovered, setHovered] = useState(false);
-  const {toggleFavourite} = useContext(Context)
-  function heartIcon() {
-    if(isFavorite) {
-      return (
-        <i
-          className="ri-heart-2-fill"
-          style={{ cursor: "pointer", color: "crimson" }}
-          onClick={() => toggleFavourite(Id)}
-        ></i>
-      );
-    } else if(hovered) {
-      return (
-        <i
-          className="ri-heart-2-line"
-          style={{ cursor: "pointer", color: 'crimson' }}
-          title="Add as Favourite"
-          onClick={() => toggleFavourite(Id)}
-        ></i>
-      );
-    }
-  } 
+  const {toggleFavourite, addToCart} = useContext(Context)
+  
+    function heartIcon() {
+      if (isFavorite) {
+        return (
+          <i
+            className="ri-heart-2-fill"
+            style={{ cursor: "pointer", color: "crimson" }}
+            onClick={() => toggleFavourite(Id)}
+          ></i>
+        );
+      } else if (hovered) {
+        return (
+          <i
+            className="ri-heart-2-line"
+            style={{ cursor: "pointer", color: "crimson" }}
+            title="Add as Favourite"
+            onClick={() => toggleFavourite(Id)}
+          ></i>
+        );
+      }
+    }; 
   return (
     <Card
       className="mt-5"
@@ -51,17 +55,13 @@ export default function ProductCard({ Title, Price, Img, Id, isFavorite}) {
           <br></br>
           <span className="mt-1">Price: ${Price}</span>
         </CardText>
-        <Button>Add to Cart</Button>
+        <Button onClick={() => addToCart(Img,Id,isFavorite) }  >Add to Cart</Button>
       </CardBody>
       <CardFooter>
-        <span>
-          Rate product:
-          <span className="stars">
-            {" "}
+        <div>Rate product:</div>
             <Rating />
-          </span>
-        </span>
       </CardFooter>
     </Card>
   );
 }
+

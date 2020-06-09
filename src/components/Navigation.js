@@ -15,11 +15,11 @@ export default function Navigation(props) {
 
     const toggleNavbar = () => setCollapsed(!collapsed);
     return (
-      <Navbar className="mt-4" color="faded" light expand="md">
+      <Navbar className="navbar-dark bg-dark text-white"  light expand="md">
         <div className="container">
-          <div className="mr-auto">
+          <div className="mr-auto companyName">
             <Link to="/" style={{ fontSize: "34px" }}>
-              Shop name
+              WebShop
             </Link>
           </div>
           <NavbarToggler onClick={toggleNavbar} className="mr-2" />

@@ -6,25 +6,23 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 export default function Home() {
   const { allProducts } = useContext(Context);
-  
 
-  const products = allProducts.map((product) => {
+  const products = allProducts.map(({ Id, Title, Price, Img, isFavorite }) => {
     return (
-      <Col key={product.Id} md="6" lg="4">
+      <Col key={Id} md="6" lg="4" className="text-center p-0">
         <ProductCard
-          Title={product.Title}
-          Price={product.Price}
-          Img={product.Img}
-          Id={product.Id}
-          isFavorite={product.isFavorite}
+          Title={Title}
+          Price={Price}
+          Img={Img}
+          Id={Id}
+          isFavorite={isFavorite}
         />
       </Col>
     );
   });
- 
 
   return (
-    <Container className="mt-5">
+    <Container>
       <ToastContainer />
       <Row>{products}</Row>
     </Container>

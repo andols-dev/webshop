@@ -14,7 +14,7 @@ import Rating from "./Rating";
 import "react-toastify/dist/ReactToastify.css";
 
 
-export default function ProductCard({ Title, Price, Img, Id, isFavorite}) {
+export default function ProductCard({ Title, Price, Img, Id, isFavorite,Product}) {
   const [hovered, setHovered] = useState(false);
   const {toggleFavourite, addToCart} = useContext(Context)
   
@@ -55,7 +55,7 @@ export default function ProductCard({ Title, Price, Img, Id, isFavorite}) {
           <br></br>
           <span className="mt-1">Price: ${Price}</span>
         </CardText>
-        <Button onClick={() => addToCart(Img,Id,isFavorite) }  >Add to Cart</Button>
+        <Button onClick={() => addToCart(Product) }  >Add to Cart</Button>
       </CardBody>
       <CardFooter>
         <div>Rate product:</div>

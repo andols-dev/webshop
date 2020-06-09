@@ -28,10 +28,13 @@ a, a:hover {
 .navbar-toggler {
     color: #fff !important;
 }
-
+.test {
+    margin-right:"174px"
+}
 @media only screen and (min-width: 768px) {
     .card {
     width: 18rem;
 }
 
 }
+

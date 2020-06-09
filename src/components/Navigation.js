@@ -8,14 +8,14 @@ export default function Navigation(props) {
     const {cartItems} = useContext(Context)
     const cart =
       cartItems.length === 0 ? (
-        <i className="ri-shopping-cart-2-line"></i>
+        <i className="ri-shopping-cart-2-line test"></i>
       ) : (
-        <i className="ri-shopping-cart-2-fill"></i>
+        <i className="ri-shopping-cart-2-fill test"></i>
       );
 
     const toggleNavbar = () => setCollapsed(!collapsed);
     return (
-      <Navbar className="navbar-dark bg-dark text-white"  light expand="md">
+      <Navbar className="navbar-dark bg-dark text-white" light expand="md">
         <div className="container">
           <div className="mr-auto companyName">
             <Link to="/" style={{ fontSize: "34px" }}>
@@ -27,7 +27,10 @@ export default function Navigation(props) {
             <Nav className="mr-auto"></Nav>
             <Nav>
               <NavItem>
-                <Link to="/cart" style={{ fontSize: "34px" }}>
+                <Link className="test"
+                  to="/cart"
+                  style={{ fontSize: "34px", marginRight: "74px" }}
+                >
                   {cart}
                 </Link>
               </NavItem>

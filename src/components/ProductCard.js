@@ -55,11 +55,13 @@ export default function ProductCard({ Title, Price, Img, Id, isFavorite,Product}
           <br></br>
           <span className="mt-1">Price: ${Price}</span>
         </CardText>
-        <Button onClick={() => addToCart(Product) }  >Add to Cart</Button>
+        <Button color="success" onClick={() => addToCart(Product)}>
+          Add to Cart
+        </Button>
       </CardBody>
       <CardFooter>
         <div>Rate product:</div>
-            <Rating />
+        <Rating />
       </CardFooter>
     </Card>
   );

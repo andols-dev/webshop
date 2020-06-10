@@ -1,40 +1,49 @@
 img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 input[type="radio"] {
-    display: none;
-    
+  display: none;
 }
 
 .star {
-    cursor: pointer;
-    font-size: 24px;
-    margin-right: 12px;
+  cursor: pointer;
+  font-size: 24px;
+  margin-right: 12px;
 }
 
-
 label {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 a {
-  color: #FFF !important;
+  color: #fff !important;
 }
-a, a:hover {
-    text-decoration: none !important;
+a,
+a:hover {
+  text-decoration: none !important;
 }
 .navbar-toggler {
-    color: #fff !important;
+  color: #fff !important;
 }
 .test {
-    margin-right:"174px"
+  margin-right: "174px";
 }
+Nav {
+    position: relative;
+}
+.rounded-circle {
+    position: absolute;
+    margin-left: 23px;;
+    width:25px;
+    height:25px;
+    text-align: center;
+    
+}
+
 @media only screen and (min-width: 768px) {
-    .card {
+  .card {
     width: 18rem;
+  }
 }
-
-}
-

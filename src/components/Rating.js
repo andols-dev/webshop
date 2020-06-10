@@ -11,7 +11,6 @@ export default function Rating() {
                 const ratingValue = i + 1;
                 return (
                   <label key={i}>
-                   
                     <input
                       type="radio"
                       name="rating"
@@ -22,7 +21,7 @@ export default function Rating() {
                       className="ri-star-fill star"
                       style={
                         ratingValue <= (hover || rating)
-                          ? { color: "#ffc107" }
+                          ? { color: "#4BB543" }
                           : { color: "#e4e5e9" }
                       }
                       onMouseEnter={() => setHover(ratingValue)}

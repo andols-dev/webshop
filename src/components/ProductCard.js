@@ -1,6 +1,7 @@
 import React, {useState, useContext} from "react";
 import {Context} from "../Context"
 import {
+  UncontrolledTooltip,
   Card,
   Button,
   CardHeader,
@@ -21,20 +22,35 @@ export default function ProductCard({ Title, Price, Img, Id, isFavorite,Product}
     function heartIcon() {
       if (isFavorite) {
         return (
+          
           <i
+            href="#"
+            id="UncontrolledTooltipExample"
             className="ri-heart-2-fill"
             style={{ cursor: "pointer", color: "crimson" }}
             onClick={() => toggleFavourite(Id)}
+            
           ></i>
+          
+                  
         );
       } else if (hovered) {
         return (
-          <i
-            className="ri-heart-2-line"
-            style={{ cursor: "pointer", color: "crimson" }}
-            title="Add as Favourite"
-            onClick={() => toggleFavourite(Id)}
-          ></i>
+          <>
+            <i
+              href="#"
+              id="UncontrolledTooltipExample"
+              className="ri-heart-2-line"
+              style={{ cursor: "pointer", color: "crimson" }}
+              onClick={() => toggleFavourite(Id)}
+            ></i>
+            <UncontrolledTooltip
+              placement="right"
+              target="UncontrolledTooltipExample"
+            >
+              Add product as favourite
+            </UncontrolledTooltip>
+          </>
         );
       }
     }; 
@@ -46,6 +62,7 @@ export default function ProductCard({ Title, Price, Img, Id, isFavorite,Product}
     >
       <CardHeader>
         <span>{Title} </span> <span className="float-right">{heartIcon()}</span>
+        
       </CardHeader>
       <CardBody>
         <CardTitle>Special Title Treatment</CardTitle>

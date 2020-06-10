@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 export default function Rating() {
     const [rating, setRating] = useState(null);
     const [hover, setHover] = useState(null);
-
+    
     return (
         <>
         

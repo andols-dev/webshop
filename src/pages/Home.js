@@ -9,7 +9,7 @@ export default function Home() {
 
   const products = allProducts.map((product) => {
     return (
-      <Col key={product.Id} md="6" lg="4" className="text-center p-0">
+      <Col key={product.Id} md="6" lg="4" className="text-center" >
         <ProductCard
           Title={product.Title}
           Price={product.Price}
@@ -23,16 +23,17 @@ export default function Home() {
   });
 
   return (
-    <>
-      
-        <h3 className="trending">Trending products</h3>
-      
+    <div>
+      <Container>
+        <h3>Trending products</h3>
+      </Container>
 
       <Container>
         <ToastContainer />
-
         <Row>{products}</Row>
       </Container>
-    </>
+      <h3>Customer Reviews</h3>
+      <div className="reviews"></div>
+    </div>
   );
 }

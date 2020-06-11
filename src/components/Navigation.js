@@ -37,7 +37,7 @@ export default function Navigation(props) {
                 <Link
                   className="test"
                   to="/cart"
-                  style={{ fontSize: "34px", marginRight: "74px" }}
+                  style={{ fontSize: "34px"}}
                 >
                   {cart}
                 </Link>

@@ -72,7 +72,7 @@ export default function ProductCard({ Title, Price, Img, Id, isFavorite,Product}
           <br></br>
           <span className="mt-1">Price: ${Price}</span>
         </CardText>
-        <Button color="success" onClick={() => addToCart(Product)}>
+        <Button outline color="success" onClick={() => addToCart(Product)}>
           Add to Cart
         </Button>
       </CardBody>

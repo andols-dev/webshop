@@ -56,7 +56,7 @@ export default function ProductCard({ Title, Price, Img, Id, isFavorite,Product}
     }; 
   return (
     <Card
-      className="mt-5 card"
+      className="mt-2 card"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >

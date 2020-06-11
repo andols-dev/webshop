@@ -41,9 +41,11 @@ Nav {
   text-align: center;
 }
 
-body, a,span {
+body, a,span, h3 {
   font-family: "Open Sans", sans-serif;
 }
+
+
 @media only screen and (min-width: 768px) {
   .card {
     width: 18rem;

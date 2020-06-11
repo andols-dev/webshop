@@ -23,9 +23,16 @@ export default function Home() {
   });
 
   return (
-    <Container>
-      <ToastContainer />
-      <Row>{products}</Row>
-    </Container>
+    <>
+      
+        <h3 className="trending">Trending products</h3>
+      
+
+      <Container>
+        <ToastContainer />
+
+        <Row>{products}</Row>
+      </Container>
+    </>
   );
 }

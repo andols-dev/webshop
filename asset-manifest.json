@@ -1,25 +1,29 @@
 {
   "files": {
     "main.css": "/webshop/static/css/main.94800db1.chunk.css",
-    "main.js": "/webshop/static/js/main.1d466f85.chunk.js",
-    "main.js.map": "/webshop/static/js/main.1d466f85.chunk.js.map",
+    "main.js": "/webshop/static/js/main.afd20b5d.chunk.js",
+    "main.js.map": "/webshop/static/js/main.afd20b5d.chunk.js.map",
     "runtime-main.js": "/webshop/static/js/runtime-main.daa844bb.js",
     "runtime-main.js.map": "/webshop/static/js/runtime-main.daa844bb.js.map",
     "static/css/2.e7c4c567.chunk.css": "/webshop/static/css/2.e7c4c567.chunk.css",
-    "static/js/2.7e01c5ff.chunk.js": "/webshop/static/js/2.7e01c5ff.chunk.js",
-    "static/js/2.7e01c5ff.chunk.js.map": "/webshop/static/js/2.7e01c5ff.chunk.js.map",
+    "static/js/2.295bf283.chunk.js": "/webshop/static/js/2.295bf283.chunk.js",
+    "static/js/2.295bf283.chunk.js.map": "/webshop/static/js/2.295bf283.chunk.js.map",
     "index.html": "/webshop/index.html",
-    "precache-manifest.c54cde15305f3a36db10b00588ed7331.js": "/webshop/precache-manifest.c54cde15305f3a36db10b00588ed7331.js",
+    "precache-manifest.3549a937d4909061d60b6fd772fcd68b.js": "/webshop/precache-manifest.3549a937d4909061d60b6fd772fcd68b.js",
     "service-worker.js": "/webshop/service-worker.js",
     "static/css/2.e7c4c567.chunk.css.map": "/webshop/static/css/2.e7c4c567.chunk.css.map",
     "static/css/main.94800db1.chunk.css.map": "/webshop/static/css/main.94800db1.chunk.css.map",
-    "static/js/2.7e01c5ff.chunk.js.LICENSE.txt": "/webshop/static/js/2.7e01c5ff.chunk.js.LICENSE.txt"
+    "static/js/2.295bf283.chunk.js.LICENSE.txt": "/webshop/static/js/2.295bf283.chunk.js.LICENSE.txt",
+    "static/media/comein.jpg": "/webshop/static/media/comein.ea51a632.jpg",
+    "static/media/sneakers1.jpg": "/webshop/static/media/sneakers1.349d636b.jpg",
+    "static/media/sneakers2.jpg": "/webshop/static/media/sneakers2.51787fb7.jpg",
+    "static/media/sneakers3.jpg": "/webshop/static/media/sneakers3.17e95534.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.daa844bb.js",
     "static/css/2.e7c4c567.chunk.css",
-    "static/js/2.7e01c5ff.chunk.js",
+    "static/js/2.295bf283.chunk.js",
     "static/css/main.94800db1.chunk.css",
-    "static/js/main.1d466f85.chunk.js"
+    "static/js/main.afd20b5d.chunk.js"
   ]
 }

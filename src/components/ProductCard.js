@@ -67,7 +67,7 @@ export default function ProductCard({ Title, Price, Img, Id, isFavorite,Product}
         <CardTitle>Special Title Treatment</CardTitle>
         <CardText>
           <img src={Img} alt="" />
-          <span className="pt-5" style={{display:'block'}}>
+          <span className="pt-5" style={{ display: "block" }}>
             With supporting text below as a natural lead-in to additional
             content.
           </span>

@@ -25,7 +25,7 @@ export default function Navigation(props) {
       <Navbar className="navbar-dark bg-dark text-white" light expand="md">
         <div className="container">
           <div className="mr-auto companyName">
-            <Link to="/" style={{ fontSize: "34px" }}>
+            <Link to="/webshop" style={{ fontSize: "34px" }}>
               Web<span style={{ color: "#4BB543" }}>Shop</span>
             </Link>
           </div>
@@ -36,7 +36,7 @@ export default function Navigation(props) {
               <NavItem>
                 <Link
                   className="test"
-                  to="/cart"
+                  to="/webshop/cart"
                   style={{ fontSize: "34px"}}
                 >
                   {cart}

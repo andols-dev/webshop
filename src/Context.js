@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
-import products from "./products";
+import {products} from "./products";
 const Context = React.createContext();
 
 function ContextProvider({ children }) {

@@ -14,10 +14,10 @@ function App() {
 
       <div>
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/webshop">
             <Home />
           </Route>
-          <Route path="/cart">
+          <Route path="/webshop/cart">
             <Cart />
           </Route>
         </Switch>

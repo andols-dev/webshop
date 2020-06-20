@@ -4,7 +4,7 @@ import ProductCard from "../components/ProductCard";
 import { Container, Row, Col } from "reactstrap";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import comein from "../img/comein.jpg";
 export default function Home() {
   const { allProducts } = useContext(Context);
 
@@ -29,7 +29,7 @@ export default function Home() {
         <Container>
           <Row className="infoRow">
             <Col md="6">
-              <img src="/img/come_in.jpg" alt="" />
+              <img src={comein} alt="" />
             </Col>
             <Col md="6">
               <h3>Welcome</h3>
@@ -53,9 +53,6 @@ export default function Home() {
         <ToastContainer style={{ marginTop: "3.1rem" }} />
         <Row>{products}</Row>
       </Container>
-     
-
-      
     </div>
   );
 }

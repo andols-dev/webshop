@@ -49,15 +49,13 @@ export default function Home() {
         <h3 className="mt-5">Trending products</h3>
       </Container>
 
-      <Container>
+      <Container className="mb-5">
         <ToastContainer style={{ marginTop: "3.1rem" }} />
         <Row>{products}</Row>
       </Container>
-      <Container className="customerContainer">
-        <h3>Customer Reviews</h3>
-      </Container>
+     
 
-      <div className="reviews"></div>
+      
     </div>
   );
 }

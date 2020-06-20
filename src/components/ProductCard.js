@@ -62,13 +62,15 @@ export default function ProductCard({ Title, Price, Img, Id, isFavorite,Product}
     >
       <CardHeader>
         <span>{Title} </span> <span className="float-right">{heartIcon()}</span>
-        
       </CardHeader>
       <CardBody>
         <CardTitle>Special Title Treatment</CardTitle>
         <CardText>
           <img src={Img} alt="" />
-          With supporting text below as a natural lead-in to additional content.
+          <span className="pt-5" style={{display:'block'}}>
+            With supporting text below as a natural lead-in to additional
+            content.
+          </span>
           <br></br>
           <span className="mt-1">Price: ${Price}</span>
         </CardText>

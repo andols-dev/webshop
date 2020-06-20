@@ -11,8 +11,7 @@ function ContextProvider({ children }) {
   const toggleFavourite = (id) => {
     const updatedProdArr = allProducts.map((product) => {
       if (product.Id === id) {
-        console.log(id);
-        console.log(!product.isFavorite);
+        
         return {
           ...product,
           isFavorite: !product.isFavorite,
@@ -26,11 +25,28 @@ function ContextProvider({ children }) {
   function addToCart(newItem) {
     setCartItems((prevItems) => [...prevItems, newItem]);
     toast.success("You've added item to cart!");
+    
   }
-  console.log(cartItems);
+
+  function removeFromCart(id) {
+    setCartItems((prevItems) => prevItems.filter((item) => item.Id !== id));
+    console.log('remove');
+  }
+
+  function emptyCart() {
+    setCartItems([]);
+  }
+  //console.log(cartItems);
   return (
     <Context.Provider
-      value={{ allProducts, toggleFavourite, cartItems, addToCart }}
+      value={{
+        allProducts,
+        toggleFavourite,
+        cartItems,
+        addToCart,
+        removeFromCart,
+        emptyCart,
+      }}
     >
       {children}
     </Context.Provider>
